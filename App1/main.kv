@@ -1,0 +1,51 @@
+#:kivy 2.0
+
+<MyApp>:
+    MyScreenManager:
+
+<MyScreenManager>:
+    LoginScreen:
+    MainScreen:
+
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 10
+        padding: 20
+
+        TextInput:
+            id: user
+            hint_text: "Usuario"
+
+        TextInput:
+            id: pwd
+            hint_text: "Password"
+            password: True
+
+        Button:
+            text: "Login"
+            on_press: root.verif()
+
+<MainScreen>: 
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 10
+        padding: 20
+
+        TextInput:
+            id: user
+            hint_text: "Usuario"
+
+        TextInput:
+            id: pwd
+            hint_text: "Password"
+            password: True
+
+        Button:
+            text: "Login"
+            on_press: root.verif()
+<P>:
+    Label:
+        text: "Please enter valid information"
+        size_hint: 0.2, 0.1
+        pos_hint: {"x": 0.3, "top": 0.8}
